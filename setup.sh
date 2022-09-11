@@ -16,9 +16,10 @@ read -p "Enter Ngrok Authtoken: " ngrok
 mkdir McServer
 cd McServer
 clear
-echo "paper"
-echo "bukkit"
-echo "spigot"
+echo "paper) Paper"
+echo "bukkit) Bukkit"
+echo "spigot) Spigot"
+echo
 read -p "Server Type: " type
 clear
 read -p "Server Version: " version
@@ -36,8 +37,9 @@ mv spigot-$version.jar server.jar
 fi
 clear
 echo "Do You Accept EULA?:"
-echo "1) Yes"
-echo "2) No"
+echo
+echo "yes) Yes"
+echo "no) No"
 read -p "Answer: " eula
 if [ $eula = "yes" ]
 then
@@ -56,16 +58,3 @@ rm ~/setup.sh
 screen -S server -d -m ./runserver.sh
 screen -S ngrok -d -m ./ngrok tcp 25565
 echo "Your server has been launched!"
-echo "ip) View IP Adress" 
-echo "console) View Server Console"
-read -p "Answer: " view
-if [ $view = "ip" ]
-then
-echo "To Exit viewing, press CTRL+A and D"
-sleep 5
-screen -r ngrok
-else
-echo "To Exit viewing, press CTRL+A and D"
-sleep 5
-screen -r server
-fi
