@@ -44,7 +44,7 @@ then
 wget https://raw.githubusercontent.com/YigitKral1/GoogleMc/main/eula.txt
 else
 cd ~
-sudo rm McServer
+rmdir McServer/
 rm ngrok
 echo "Exiting..."
 exit
