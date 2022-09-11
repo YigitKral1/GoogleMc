@@ -59,8 +59,8 @@ rm ~/setup.sh
 screen -S server -d -m ./runserver.sh
 screen -S ngrok -d -m ./ngrok tcp 25565
 echo "Your server has been launched!"
-echo "To see your servers ip press 1." 
-echo "To see your servers console press 2."
+echo "1) View IP Adress" 
+echo "2) View Server Console"
 read -p "Answer: " view
 if [ view = "1" ]
 then
