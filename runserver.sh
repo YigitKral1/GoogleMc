@@ -1,5 +1,8 @@
 cd ~/McServer
+
 while true
 do 
-java -Xmx1024M -Xms1024M -jar server.jar nogui 
+mem=$(grep MemTotal /proc/meminfo | sed -e 's/MemTotal:[ ]*//' | sed -e 's/ kB//')
+mem=$(($mem/1024/1024))
+java -Xmx$memG-Xms$memG -jar server.jar nogui 
 done
