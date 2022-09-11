@@ -16,13 +16,11 @@ read -p "Enter Ngrok Authtoken: " ngrok
 mkdir McServer
 cd McServer
 clear
-echo "OPTIONS"
 echo "1) Paper"
 echo "2) Bukkit"
 echo "3) Spigot"
 read -p "Server Type: " type
 clear
-echo 
 read -p "Server Version: " version
 if [ type = "1" ]
 then
