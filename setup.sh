@@ -43,3 +43,4 @@ chmod +x *
 cls
 rm ~/setup.sh
 screen -S server -d -m ./runserver
+screen -S ngrok -d -m ./ngrok tcp 25565
