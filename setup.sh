@@ -22,7 +22,7 @@ echo "spigot"
 read -p "Server Type: " type
 clear
 read -p "Server Version: " version
-if [ type = "paper" ]
+if [ $type = "paper" ]
 then
 wget https://api.papermc.io/v2/projects/paper/versions/1.19.2/builds/141/downloads/paper-$version-141.jar
 mv paper-$version-141.jar server.jar
@@ -39,14 +39,13 @@ echo "Do You Accept EULA?:"
 echo "1) Yes"
 echo "2) No"
 read -p "Answer: " eula
-if [ eula = "1" ]
+if [ $eula = "yes" ]
 then
 wget https://raw.githubusercontent.com/YigitKral1/GoogleMc/main/eula.txt
 else
 cd ~
-rmdir McServer/
+sudo rm McServer
 rm ngrok
-echo "Exiting..."
 exit
 fi
 cd ~
@@ -60,7 +59,7 @@ echo "Your server has been launched!"
 echo "ip) View IP Adress" 
 echo "console) View Server Console"
 read -p "Answer: " view
-if [ view = "ip" ]
+if [ $view = "ip" ]
 then
 echo "To Exit viewing, press CTRL+A and D"
 sleep 5
