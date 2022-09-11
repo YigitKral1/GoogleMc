@@ -16,17 +16,17 @@ read -p "Enter Ngrok Authtoken: " ngrok
 mkdir McServer
 cd McServer
 clear
-echo "1) Paper"
-echo "2) Bukkit"
-echo "3) Spigot"
+echo "paper"
+echo "bukkit"
+echo "spigot"
 read -p "Server Type: " type
 clear
 read -p "Server Version: " version
-if [ type = "1" ]
+if [ type = "paper" ]
 then
 wget https://api.papermc.io/v2/projects/paper/versions/1.19.2/builds/141/downloads/paper-$version-141.jar
 mv paper-$version-141.jar server.jar
-elif [ type = "2" ]
+elif [ type = "bukkit" ]
 then 
 wget https://download.getbukkit.org/craftbukkit/craftbukkit-$version.jar
 mv craftbukkit-$version.jar server.jar
@@ -57,10 +57,10 @@ rm ~/setup.sh
 screen -S server -d -m ./runserver.sh
 screen -S ngrok -d -m ./ngrok tcp 25565
 echo "Your server has been launched!"
-echo "1) View IP Adress" 
-echo "2) View Server Console"
+echo "ip) View IP Adress" 
+echo "console) View Server Console"
 read -p "Answer: " view
-if [ view = "1" ]
+if [ view = "ip" ]
 then
 echo "To Exit viewing, press CTRL+A and D"
 sleep 5
