@@ -29,6 +29,7 @@ mv spigot-$version.jar server.jar
 fi
 clear
 wget https://raw.githubusercontent.com/YigitKral1/GoogleMc/main/eula.txt
+cd ~
 wget https://raw.githubusercontent.com/YigitKral1/GoogleMc/main/runserver.sh
 chmod +x *
 cls
