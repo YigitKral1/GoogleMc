@@ -33,12 +33,24 @@ then
 wget https://download.getbukkit.org/craftbukkit/craftbukkit-$version.jar
 mv craftbukkit-$version.jar server.jar
 else
-then
 wget https://download.getbukkit.org/spigot/spigot-$version.jar
 mv spigot-$version.jar server.jar
 fi
 clear
+echo "Do You Accept EULA?:"
+echo "1) Yes"
+echo "2) No"
+read -p "Answer: " eula
+if [ eula = "1"]
+then
 wget https://raw.githubusercontent.com/YigitKral1/GoogleMc/main/eula.txt
+else
+cd ~
+rm McServer
+rm ngrok
+echo "Exiting..."
+exit
+fi
 cd ~
 wget https://raw.githubusercontent.com/YigitKral1/GoogleMc/main/runserver.sh
 chmod +x *
@@ -51,11 +63,11 @@ echo "To see your servers ip press 1."
 echo "To see your servers console press 2."
 read -p "Answer: " view
 if [ view = "1" ]
+then
 echo "To Exit viewing, press CTRL+A and D"
 sleep 5
 screen -r ngrok
 else
-then
 echo "To Exit viewing, press CTRL+A and D"
 sleep 5
 screen -r server
