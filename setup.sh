@@ -42,5 +42,12 @@ wget https://raw.githubusercontent.com/YigitKral1/GoogleMc/main/runserver.sh
 chmod +x *
 cls
 rm ~/setup.sh
-screen -S server -d -m ./runserver
+screen -S server -d -m ./runserver.sh
 screen -S ngrok -d -m ./ngrok tcp 25565
+echo "Your server has been launched! To see your servers ip press 1. To see your servers console press 2."
+read -p "Answer: " view
+if [ view = "1" ]
+screen -r ngrok
+else
+screen -r server
+fi
