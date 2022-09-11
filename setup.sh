@@ -3,7 +3,14 @@
 mv setup.sh ~
 sudo apt update -y && sudo apt upgrade -y
 sudo apt install openjdk-17-jre-headless -y
+sudo apt install screen -y
 sudo apt install nano -y
+sudo apt install unzip -y
+wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.zip
+unzip ngrok-v3-stable-linux-amd64.zip
+clear
+read -p "Enter Ngrok Authtoken: " ngrok
+ngrok config add-authtoken $ngrok
 mkdir McServer
 cd McServer
 clear
