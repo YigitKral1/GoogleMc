@@ -1,3 +1,4 @@
+cd ~
 screen -S Ngrok
 screen -X -S Ngrok ~/./ngrok tcp 25565
 screen -S Server
