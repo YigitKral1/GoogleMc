@@ -42,4 +42,4 @@ wget https://raw.githubusercontent.com/YigitKral1/GoogleMc/main/runserver.sh
 chmod +x *
 cls
 rm ~/setup.sh
-./runserver.sh
+screen -S server -d -m ./runserver
