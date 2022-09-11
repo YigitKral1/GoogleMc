@@ -47,7 +47,11 @@ screen -S ngrok -d -m ./ngrok tcp 25565
 echo "Your server has been launched! To see your servers ip press 1. To see your servers console press 2."
 read -p "Answer: " view
 if [ view = "1" ]
+echo "To Exit viewing, press CTRL+A and D"
+sleep 5
 screen -r ngrok
 else
+echo "To Exit viewing, press CTRL+A and D"
+sleep 5
 screen -r server
 fi
