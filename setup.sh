@@ -32,6 +32,7 @@ then
 wget https://download.getbukkit.org/craftbukkit/craftbukkit-$version.jar
 mv craftbukkit-$version.jar server.jar
 else
+then
 wget https://download.getbukkit.org/spigot/spigot-$version.jar
 mv spigot-$version.jar server.jar
 fi
@@ -51,6 +52,7 @@ echo "To Exit viewing, press CTRL+A and D"
 sleep 5
 screen -r ngrok
 else
+then
 echo "To Exit viewing, press CTRL+A and D"
 sleep 5
 screen -r server
