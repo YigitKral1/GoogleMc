@@ -28,14 +28,5 @@ wget https://download.getbukkit.org/spigot/spigot-$version.jar
 mv spigot-$version.jar server.jar
 fi
 clear
-echo "Do you accept eula?:"
-echo "Y) Yes"
-echo "N) No"
-read -p "Answer: " eula
-if [ eula = "y" ]
 wget https://raw.githubusercontent.com/YigitKral1/GoogleMc/main/eula.txt
-elif [ eula = "n" ]
-cd ~
-rm McServer
-fi
 rm ~/setup.sh
