@@ -45,7 +45,9 @@ clear
 rm ~/setup.sh
 screen -S server -d -m ./runserver.sh
 screen -S ngrok -d -m ./ngrok tcp 25565
-echo "Your server has been launched! To see your servers ip press 1. To see your servers console press 2."
+echo "Your server has been launched!"
+echo "To see your servers ip press 1." 
+echo "To see your servers console press 2."
 read -p "Answer: " view
 if [ view = "1" ]
 echo "To Exit viewing, press CTRL+A and D"
