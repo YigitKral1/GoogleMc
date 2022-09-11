@@ -40,7 +40,7 @@ wget https://raw.githubusercontent.com/YigitKral1/GoogleMc/main/eula.txt
 cd ~
 wget https://raw.githubusercontent.com/YigitKral1/GoogleMc/main/runserver.sh
 chmod +x *
-cls
+clear
 rm ~/setup.sh
 screen -S server -d -m ./runserver.sh
 screen -S ngrok -d -m ./ngrok tcp 25565
