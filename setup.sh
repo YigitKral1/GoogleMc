@@ -1,5 +1,6 @@
 #! /bin/bash
 
+cd ~
 mv setup.sh ~
 sudo apt update -y && sudo apt upgrade -y
 sudo apt install openjdk-17-jre-headless -y
