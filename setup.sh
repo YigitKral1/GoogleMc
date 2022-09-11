@@ -7,15 +7,14 @@ sudo apt install nano -y
 mkdir McServer
 cd McServer
 clear
-echo "Avaible Types:"
+echo "Select Your Server:"
 echo "1) Paper"
 echo "2) Bukkit"
 echo "3) Spigot"
-read -p "Type: " type
+read -p "Answer: " type
 clear
-echo "Q: How to put your version?"
-echo "A: Please put it like '1.19.2' etc."
-read -p "Version: " version
+echo "Put In Your Version:"
+read -p "Answer: " version
 if [ type = "1" ]
 then
 wget https://api.papermc.io/v2/projects/paper/versions/1.19.2/builds/141/downloads/paper-$version-141.jar
