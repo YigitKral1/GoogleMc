@@ -34,7 +34,7 @@ echo "N) No"
 read -p "Answer: " eula
 if [ eula = "y" ]
 wget https://raw.githubusercontent.com/YigitKral1/GoogleMc/main/eula.txt
-else
+elif [ eula = "n" ]
 cd ~
 rm McServer
 fi
