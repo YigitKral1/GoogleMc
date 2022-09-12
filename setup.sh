@@ -7,6 +7,7 @@ sudo apt install openjdk-17-jre-headless -y
 sudo apt install screen -y
 sudo apt install nano -y
 sudo apt install unzip -y
+sudo apt install iputils-ping -y
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.zip
 unzip ngrok-v3-stable-linux-amd64.zip
 rm ngrok-v3-stable-linux-amd64.zip
@@ -39,3 +40,8 @@ rm ~/setup.sh
 screen -S server -d -m ./runserver.sh
 screen -S ngrok -d -m ./ngrok tcp 25565
 echo "Your server has been launched!"
+read -p "Enter Ngrok IP: " ip
+while true
+do
+ping ip
+done
