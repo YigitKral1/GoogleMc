@@ -15,33 +15,14 @@ read -p "Enter Ngrok Authtoken: " ngrok
 ./ngrok config add-authtoken $ngrok
 mkdir McServer
 cd McServer
-clear
-echo "paper) Paper"
-echo "bukkit) Bukkit"
-echo "spigot) Spigot"
-echo
-read -p "Server Type: " type
-clear
-read -p "Server Version: " version
-if [ $type = "paper" ]
-then
-wget https://api.papermc.io/v2/projects/paper/versions/1.19.2/builds/141/downloads/paper-$version-141.jar
-mv paper-$version-141.jar server.jar
-elif [ type = "bukkit" ]
-then 
-wget https://download.getbukkit.org/craftbukkit/craftbukkit-$version.jar
-mv craftbukkit-$version.jar server.jar
-else
-wget https://download.getbukkit.org/spigot/spigot-$version.jar
-mv spigot-$version.jar server.jar
-fi
+wget https://piston-data.mojang.com/v1/objects/f69c284232d7c7580bd89a5a4931c3581eae1378/server.jar
 clear
 echo "Do You Accept EULA?:"
 echo
-echo "yes) Yes"
-echo "no) No"
+echo "1) Yes"
+echo "2) No"
 read -p "Answer: " eula
-if [ $eula = "yes" ]
+if [ $eula = "1" ]
 then
 wget https://raw.githubusercontent.com/YigitKral1/GoogleMc/main/eula.txt
 else
